@@ -21,8 +21,8 @@
 #define READ_REG(REG) REG
 #define READ_BIT(REG, BIT) REG & BIT
 #define WRITE_REG(REG,VALUE) REG = VALUE
-#define SET_BIT(REG,BIT) REG |= (1<<BITS_TO_ONE)
-#define CLEAR_BIT(REG,BIT) REG = REG &= ~(1<<BITS_TO_ZERO)
+#define SET_BIT(REG,BIT) REG |= (1<<BIT)
+#define CLEAR_BIT(REG,BIT) REG = REG &= ~(1<<BIT)
 #define MODIFY_REG(REG,BITS_TO_ZERO,BITS_TO_ONE) REG = REG | (1<<BITS_TO_ONE) & ~(1<<BITS_TO_ZERO)
 
 #endif /*__STANDARD_H__*/

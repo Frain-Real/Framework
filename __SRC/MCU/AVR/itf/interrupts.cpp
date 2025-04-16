@@ -5,17 +5,17 @@
 #include "hw_i2c.h"
 #include "hw_spi.h"
 #include "timer.h"
-#include "hw_uart.h"
+#include "uart.h"
 #include "hw_pwm.h"
 #include "hw_rtc.h"
 
 
 ISR (USART_TX_vect) {
-
+    uart__tx_handler(0);
 }
 
 ISR (USART_RX_vect) {
-
+    uart__rx_handler(0);
 }
 
 ISR (USART_UDRE_vect) {
@@ -23,7 +23,7 @@ ISR (USART_UDRE_vect) {
 }
 
 ISR (SPI_STC_vect) {
-
+    
 }
 
 ISR (SPM_READY_vect) {
