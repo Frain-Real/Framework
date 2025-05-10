@@ -3,7 +3,7 @@
 
 void HWGpioPin::init(u8 port, u8 pin, u8 diraction, u8 pulled) {
     if(port == GPIO_PORTB) {
-        if (diraction == (u8)OUTPUT) {
+        if (diraction == OUTPUT) {
             DDRB |= (1 << pin);  // Установка пина как выхода
         } else {
             DDRB &= ~(1 << pin); // Установка пина как входа
@@ -11,7 +11,7 @@ void HWGpioPin::init(u8 port, u8 pin, u8 diraction, u8 pulled) {
         }
     }
     if(port == GPIO_PORTC) {
-        if (diraction == (u8)OUTPUT) {
+        if (diraction == OUTPUT) {
             DDRC |= (1 << pin);
         } else {
             DDRC &= ~(1 << pin);
@@ -19,7 +19,7 @@ void HWGpioPin::init(u8 port, u8 pin, u8 diraction, u8 pulled) {
         }
     }
     if(port == GPIO_PORTD) {
-        if (diraction == (u8)OUTPUT) {
+        if (diraction == OUTPUT) {
             DDRD |= (1 << pin);
         } else {
             DDRD &= ~(1 << pin);

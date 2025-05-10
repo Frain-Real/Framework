@@ -1,5 +1,5 @@
-#include "__FRAMEWORK/standard.h"
-#include "__FRAMEWORK/supervisor.h"
+#include "standard.h"
+#include "supervisor.h"
 
 Supervisor::Supervisor(supervisor__state_e state, hw_supervisor__watchdog_time_e reset_time): Hw_Supervisor(state, reset_time) {
     int i;

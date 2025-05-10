@@ -3,11 +3,11 @@
 #include "standard.h"
 #include "target.h"
 #include "event.h"
-#include "list.h"
+
 enum uart__baud_rate_e {
     UART__BAUD_RATE_9600 = 9600,
     UART__BAUD_RATE_19200 = 19200,
-    UART__BAUD_RATE_57600 = 57600,
+    UART__BAUD_RATE_57600 = 57600, 
     UART__BAUD_RATE_115200 = 115200,
     UART__BAUD_RATE_230400 = 230400,
 };
@@ -22,7 +22,7 @@ using uart__mode_e = uart__mode_e;
 
 enum uart__word_len_e{
     UART__WORD_LEN_8,
-    UART__WORD_LEN_9
+    UART__WORD_LEN_9,
 };
 using uart__word_len_e = uart__word_len_e;
 
@@ -59,7 +59,7 @@ using uart__handler_t = event__e (*)(Uart* uart, event__e ev, void* ext_data);
 
 class Uart {
     protected:
-        int num;                    // Номер
+        u8 num;                     // Номер
         uart__state_e state;        // Состояние интерфейса
         u16* rx_buff;               // Буфер отправляемого
         u16* tx_buff;               // Буфер принимаемого
@@ -84,8 +84,19 @@ class Uart {
  * @param handler Указатель на хэндлер
  *********************************************************************************/
         Uart(u8 num, uart__baud_rate_e baud, uart__mode_e mode, uart__word_len_e word_len, uart__handler_t handler, void* ext_data);
+        Uart();
 
 
+/*********************************************************************************
+ * @brief Перегрузка оператора () для передачи параметров и инициализации интерфейса
+ * @details Используется для передачи параметров и инициализации интерфейса при создании пустого объекта класса Uart.
+ * @param num Номер интерфейса
+ * @param baud Скорость интерфейса
+ * @param mode Режим интерфейса
+ * @param word_len Длина слова
+ * @param handler Указатель на хэндлер
+ *********************************************************************************/
+        void operator()(u8 num, uart__baud_rate_e baud, uart__mode_e mode, uart__word_len_e word_len, uart__handler_t handler, void* ext_data);  
 /*********************************************************************************
  * @brief Диструктор интерфейса
  *********************************************************************************/

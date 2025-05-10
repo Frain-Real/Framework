@@ -33,7 +33,7 @@ typedef struct {
 
 class Supervisor : protected Hw_Supervisor {
 private:
-    state
+
 public:
 
     supervisor__power_peripheral_t per; //таблица перифирии устройства

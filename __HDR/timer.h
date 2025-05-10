@@ -138,5 +138,26 @@ public:
     */
     void update_state();
 };
+class TimerManager {
+private:
+    List<Sw_timer*> timer_list; // Список таймеров
+    Hw_timer timer;
+public:
+    TimerManager();
+    ~TimerManager();
 
+    // Добавить таймер
+    void add_timer(Sw_timer* timer);
+    
+    // Удалить таймер
+    void remove_timer(Sw_timer* timer);
+    
+    // Получить количество активных таймеров
+    u32 get_timer_count() const;
+    
+    // Получить список таймеров
+    List<Sw_timer*>& get_timer_list() { return timer_list; }
+};
+
+#endif // __TIMER_MANAGER_H__
 #endif /* _HW_TIMER_H__ */
