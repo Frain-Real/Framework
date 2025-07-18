@@ -2,8 +2,7 @@
 #include "spi.h"
 #include "list.h"
 
-Spi::Spi(u8 num, spi__speed_e speed, spi__mode_e mode, spi__handler_t handler, void *ext_data)
-{
+Spi::Spi(u8 num, spi__speed_e speed, spi__mode_e mode, spi__handler_t handler, void *ext_data) {
 }
 
 Spi::Spi() {
