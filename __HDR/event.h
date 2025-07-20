@@ -1,5 +1,4 @@
-#ifndef __EVENT_H__
-#define __EVENT_H__
+#pragma once
 
 enum event__e {
     EVENT__OK,
@@ -14,5 +13,3 @@ enum event__e {
 };
 
 using event__e = event__e;
-#endif /* __EVENT_H__ */
-

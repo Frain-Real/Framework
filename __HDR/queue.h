@@ -1,6 +1,5 @@
 /* Класс очередей */
-#ifndef __QUEUE__
-#define __QUEUE__
+#pragma once
 
 #include "standard.h"
 
@@ -63,6 +62,3 @@ class Queue {
             return front->data;
         }
 };
-
-
-#endif /* __QUEUE__ */

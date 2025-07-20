@@ -4,7 +4,7 @@
 #include "device.h"
 #include "timer.h"
 
-extern Hw_timer hw_timer0(1000, 8);
+Hw_timer hw_timer0(1000, 8);
 
 Sw_timer::Sw_timer(u32 period) {
     this->period = period;

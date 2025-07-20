@@ -1,6 +1,5 @@
 /* Файл с полезными макросами для работы, подключать в каждый файл всех проектов */
-#ifndef __STANDARD_H__
-#define __STANDARD_H__
+#pragma once
 #include <stdio.h>
 #include <stdlib.h>
 #include <avr/interrupt.h>
@@ -24,8 +23,6 @@
 #define SET_BIT(REG,BIT) REG |= (1<<BIT)
 #define CLEAR_BIT(REG,BIT) REG = REG &= ~(1<<BIT)
 #define MODIFY_REG(REG,BITS_TO_ZERO,BITS_TO_ONE) REG = REG | (1<<BITS_TO_ONE) & ~(1<<BITS_TO_ZERO)
-
-#endif /*__STANDARD_H__*/
 
 /*
 Здесь прописана архитектура модулей для связки железозависимой части и абстракции

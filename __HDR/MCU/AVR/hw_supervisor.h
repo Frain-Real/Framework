@@ -1,6 +1,4 @@
-#ifndef __HW_SUPERVISOR__
-#define __HW_SUPERVISOR__
-
+#pragma once
 #include "standard.h"
 #include "target.h"
 
@@ -109,6 +107,3 @@ public:
     */
     void cout(void);
 };
-
-
-#endif /* __HW_SUPERVISOR__ */

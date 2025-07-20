@@ -1,5 +1,4 @@
-#ifndef __RTC_H__
-#define __RTC_H__
+#pragma once
 
 #include "standard.h"
 #include "event.h"
@@ -106,5 +105,3 @@ class Rtc {
  *********************************************************************************/
         event__e getDateTime(rtc__callback_t callback, void* ext_data);
 };
-
-#endif /* __RTC_H__ */

@@ -1,6 +1,5 @@
 /* Класс очередей */
-#ifndef __STACK__
-#define __STACK__
+#pragma once
 
 #include "standard.h"
 
@@ -50,6 +49,3 @@ public:
         }
     }
 };
-
-
-#endif /* __STACK__ */

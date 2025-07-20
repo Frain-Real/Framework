@@ -1,7 +1,6 @@
 /* Аппаратно зависимая часть таймеров Atmega328P */
 
-#ifndef __HW_TIMER_H__
-#define __HW_TIMER_H__
+#pragma once
 #include "standard.h"
 #include "list.h"
 
@@ -158,6 +157,3 @@ public:
     // Получить список таймеров
     List<Sw_timer*>& get_timer_list() { return timer_list; }
 };
-
-#endif // __TIMER_MANAGER_H__
-#endif /* _HW_TIMER_H__ */

@@ -1,6 +1,5 @@
 /* Класс списков */
-#ifndef __LIST__
-#define __LIST__
+#pragma once
 
 #include "standard.h"
 #include "stdlib.h"
@@ -161,9 +160,3 @@ public:
     }
 
 };
-
-
-
-
-
-#endif /* __LIST__ */

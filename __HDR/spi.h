@@ -1,5 +1,4 @@
-#ifndef __SPI_H__
-#define __SPI_H__
+#pragma once
 #include "standard.h"
 #include "target.h"
 #include "event.h"
@@ -118,6 +117,3 @@ class Spi {
  *********************************************************************************/
         event__e Get(u16* buff, int len, spi__cout_t cout, void* ext_data);
 };
-
-#endif /*  __SPI_H__ */
-

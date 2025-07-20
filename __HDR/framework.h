@@ -1,5 +1,4 @@
-#ifndef __FRAMEWORK_H__
-#define __FRAMEWORK_H__
+#pragma once
 #include "target.h"
 
 #ifndef UART
@@ -137,4 +136,3 @@ class Framework {
     static Framework *getInstance();
 
 }; 
-#endif /* __FRAMEWORK_H__ */

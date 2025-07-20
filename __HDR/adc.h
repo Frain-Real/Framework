@@ -1,6 +1,5 @@
 /* Аппаратно-независимый модуль работы с АЦП */
-#ifndef __SW_ADC__
-#define __SW_ADC__
+#pragma once
 
 #include "standard.h"
 #include "hw_adc.h"
@@ -29,5 +28,3 @@ public:
         return hard_adc->readADC(channel);
     }
 };
-
-#endif /* __SW_ADC__ */

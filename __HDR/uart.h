@@ -1,5 +1,4 @@
-#ifndef __UART_H__
-#define __UART_H__
+#pragma once
 #include "standard.h"
 #include "target.h"
 #include "event.h"
@@ -124,7 +123,3 @@ class Uart {
         
         friend void uart__rx_handler(int id);
 };
-
-
-#endif /*  __UART_H__ */
-
